@@ -19,7 +19,7 @@ var NavBarContainer = React.createClass({
             </button>
             <Link to="/">
               <h3>
-                <Gliff gliff="tree"/> App Name HERE
+                <Gliff gliff="tree"/> React Google Adds Hack
               </h3>
             </Link>
           </div>
