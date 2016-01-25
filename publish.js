@@ -1,6 +1,6 @@
 var ghpages = require('gh-pages');
 var path = require('path');
 
-ghpages.publish(path.join(__dirname, 'build'), function(err) {
-  console.error('cant publish', err);
+ghpages.publish(path.join(__dirname, 'build'), function() {
+  console.log('published', arguments);
 });
