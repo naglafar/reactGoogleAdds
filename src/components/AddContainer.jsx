@@ -17,10 +17,12 @@ const App = React.createClass({
     const that = this;
 
     xhr.onload = function() {
+
       that.setState({
         loading: false,
-        advert: xhr.response.firstChild.innerHTML
+        advert: xhr.response.children[0].innerHTML
       });
+
     };
 
     xhr.open('GET', this.props.url, true);
@@ -47,9 +49,7 @@ const App = React.createClass({
 
   renderAdvert: function () {
     return (
-      <div className="advert">
-        <div dangerouslySetInnerHTML={{__html: this.state.advert}}></div>
-      </div>
+      <div dangerouslySetInnerHTML={{__html: this.state.advert}}></div>
     );
   }
 
