@@ -9,7 +9,28 @@ let advertURL = 'https://pubads.g.doubleclick.net/gampad/adx?sz=160x600%7C120x60
   '2FMX_Web&c=155362414&ord=fff363d4-488f-4444-88fe-ab66e3f8b7a0&t=adtype%3Dskyscraper%26plat' +
   'form%3Dweb%26opaqueid%3D123';
 
+let interval;
+
 const App = React.createClass({
+
+  getInitialState: () => {
+    return {
+      adds: true
+    };
+  },
+
+  componentDidMount: function () {
+    const that = this;
+
+    interval = setInterval(() => {
+      that.setState({adds: !that.state.adds});
+    },
+    3000);
+  },
+
+  componentDidUnMount: () => {
+    clearInterval(interval);
+  },
 
   render: function () {
     return (
@@ -25,7 +46,7 @@ const App = React.createClass({
           <Row>
             <Col s={2}>
               <div className="leftBar">
-                <AddContainer url={advertURL} />
+                {this.renderAdvertOrNot()}
               </div>
             </Col>
             <Col s={8}>
@@ -35,7 +56,7 @@ const App = React.createClass({
             </Col>
             <Col s={2}>
               <div className="rightBar">
-                <AddContainer url={advertURL} />
+                {this.renderAdvertOrNot()}
               </div>
             </Col>
           </Row>
@@ -49,6 +70,14 @@ const App = React.createClass({
         </FluidContainer>
       </div>
     );
+  },
+
+  renderAdvertOrNot: function () {
+
+    if (this.state.adds) {
+      return <AddContainer url={advertURL} />;
+    }
+    return (<p>No Adds Atm</p>);
   }
 });
 
