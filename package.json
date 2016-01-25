@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/naglafar/constantGardner.git"
+    "url": "git@github.com:naglafar/reactGoogleAdds.git"
   },
   "scripts": {
     "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
