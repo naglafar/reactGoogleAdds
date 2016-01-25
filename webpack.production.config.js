@@ -25,7 +25,7 @@ module.exports = {
   output: {
     path: './build/',
     pathInfo: true,
-    publicPath: '/',
+    publicPath: './',
     filename: '[name].js'
   },
   debug: true,
