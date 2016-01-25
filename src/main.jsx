@@ -20,7 +20,7 @@ ReactDom.render(
   <Router history={history}>
     <Route path="/" component={Layout}>
       <IndexRoute component={App}/>
-      <Route path="adds" component={App}/>
+      <Route path="*" component={App}/>
     </Route>
   </Router>,
   document.getElementById('app'));
