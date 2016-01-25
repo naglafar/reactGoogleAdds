@@ -16,39 +16,39 @@ const App = React.createClass({
     const xhr = new XMLHttpRequest();
     const that = this;
 
-    xhr.open('GET', this.state.url, true);
-    xhr.responseType = 'document';
-
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        that.setState({
-          loading: false,
-          advert: xhr.response
-        });
-      }
+    xhr.onload = function() {
+      that.setState({
+        loading: false,
+        advert: xhr.response.firstChild.innerHTML
+      });
     };
 
+    xhr.open('GET', this.props.url, true);
+    xhr.responseType = 'document';
     xhr.send();
   },
 
   render: function () {
     return (
       <div className="advert">
-        {this.renderAdvert()}
+        {this.renderAdvertContainer()}
       </div>
     );
   },
 
-
-  renderAdvert: function () {
+  renderAdvertContainer: function () {
     if (this.state.loading) {
       return (
         <p>Loading Advert</p>
       );
     }
+    return this.renderAdvert();
+  },
+
+  renderAdvert: function () {
     return (
-      <div>
-        Advert loaded
+      <div className="advert">
+        <div dangerouslySetInnerHTML={{__html: this.state.advert}}></div>
       </div>
     );
   }

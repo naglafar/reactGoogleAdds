@@ -1,5 +1,5 @@
 {
-  "name": "rReact Google Adds Hackr",
+  "name": "ReactGoogleAddsHack",
   "version": "0.1.0",
   "description": "hack trying to display safeframe adds serverd from google using react",
   "main": "src/main.jsx",

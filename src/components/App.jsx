@@ -5,7 +5,7 @@ const FluidContainer = require('./FluidContainer.jsx'),
   Row = require('./Row.jsx'),
   AddContainer = require('./AddContainer.jsx');
 
-const advertURL = 'https://pubads.g.doubleclick.net/gampad/adx?sz=160x600%7C120x600%7C300x600&iu=%2F48773563%' +
+let advertURL = 'https://pubads.g.doubleclick.net/gampad/adx?sz=160x600%7C120x600%7C300x600&iu=%2F48773563%' +
   '2FMX_Web&c=155362414&ord=fff363d4-488f-4444-88fe-ab66e3f8b7a0&t=adtype%3Dskyscraper%26plat' +
   'form%3Dweb%26opaqueid%3D123';
 
