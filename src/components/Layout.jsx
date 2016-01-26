@@ -1,12 +1,16 @@
 const React = require('react'),
-  NavBarContainer = require('./NavigationBar.jsx');
+  NavBarContainer = require('buildingBlocks').NavigationBar;
 
 const Layout = React.createClass({
 
   render: function () {
     return (
       <div>
-        <NavBarContainer/>
+        <NavBarContainer
+          appName="Google Adverts React Hack"
+          appGliff="fire"
+          navLinks={[]}
+        />
         { this.props.children }
       </div>
     );

@@ -31,8 +31,7 @@ module.exports = {
         loaders: [
             {
                 test: jsAndJsx,
-                include: source,
-                exclude: /node_modules/,
+                include: [source, path.join(__dirname, 'node_modules/buildingBlocks')], // TODO seems like a hack
                 loader: 'babel-loader',
                 plugins: ['transform-runtime'],
                 query: {
