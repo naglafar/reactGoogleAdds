@@ -1,9 +1,4 @@
-// FLUX CONFIG
-
-require('./flux');
-
 // ROUTE CONFIG
-
 const React = require('react'), // eslint-disable-line no-unused-vars
   reactRouter = require('react-router'),
   Router = reactRouter.Router,

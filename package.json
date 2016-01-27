@@ -5,17 +5,17 @@
   "main": "src/main.jsx",
   "dependencies": {
     "babel-polyfill": "^6.0.16",
+    "buildingBlocks": "naglafar/buildingBlocks",
     "chance": "^0.8.0",
-    "fluxxor": "^1.7.3",
     "history": "^1.13.1",
     "moment": "^2.10.6",
     "ramda": "^0.18.0",
     "react": "^0.14.3",
     "react-addons-linked-state-mixin": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-google-publisher-tag": "^0.1.15",
     "react-router": "^1.0.0",
-    "uuid": "^2.0.1",
-    "buildingBlocks": "naglafar/buildingBlocks"
+    "uuid": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
