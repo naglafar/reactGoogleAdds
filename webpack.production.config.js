@@ -11,7 +11,6 @@ module.exports = {
     app: ['./src/main.jsx', './src/theme/main.less'],
     vendor: [
       'babel-polyfill',
-      'fluxxor',
       'history',
       'moment',
       'ramda',
